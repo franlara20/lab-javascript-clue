@@ -141,21 +141,31 @@ function pickMystery() {
   let cardWeapon = weaponsArray[Math.floor(Math.random() * weaponsArray.length)];
   let cardRoom = roomsArray[Math.floor(Math.random() * roomsArray.length)];
 
+  //let cardSuspect = selectRandom(suspectsArray) llamando función ya creada. Más fácil
 let mysteryCard = {
   suspect: cardSuspect,
   weapon: cardWeapon,
   room: cardRoom
 }
-
 return mysteryCard;
 }
 
+/*
+return {
+  suspect: selectRandom(suspectsArray),
+  weapon: selectRandom(weaponsArray),
+  room: selectRandom(roomsArray)
+}
+
+*/
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(mysteryCard) {
+  return console.log(mysteryCard);
+}
 
-
+return (`${mysteryCard.suspect.firstName} ${mysteryCard.suspect.lastName}killed Mr.Boddy using the ${mysteryCard.weapon.name}`);
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
